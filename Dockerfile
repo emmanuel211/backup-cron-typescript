@@ -21,4 +21,8 @@ COPY --from=build /root/dist ./dist
 
 RUN apk add --update --no-cache postgresql-client nodejs npm
 
+# Expose port 3000 (or whatever port your application uses)
+EXPOSE 3000
+
 ENTRYPOINT ["node", "dist/index.js"]
+
