@@ -23,6 +23,8 @@ RUN apk add --update --no-cache postgresql-client nodejs npm
 
 # Expose port 3000 (or whatever port your application uses)
 EXPOSE 3000
+# Set environment variable for PORT
+ENV PORT=3000
 
 ENTRYPOINT ["node", "dist/index.js"]
 
